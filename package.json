@@ -67,7 +67,7 @@
     "feather-icons": "^4.28.0",
     "figlet": "^1.2.3",
     "ftp-deploy": "^2.3.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "materialize-css": "^1.0.0-rc.2",
     "normalize.css": "^8.0.1",
     "reset-css": "^4.0.1",
