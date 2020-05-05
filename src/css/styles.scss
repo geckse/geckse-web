@@ -1,0 +1,180 @@
+@import '~materialize-css/sass/materialize.scss';
+
+/*
+  header
+*/
+
+header {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    h1 {
+      font-weight: bold;
+      margin-left: -2px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 1.3rem;
+      padding-left: 14px;
+    }
+    .pull-front {
+      z-index: 2;
+    }
+    .button {
+      width: 168px;
+      color: #fff;
+      height: 3.2rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+      padding: 0.4rem 0;
+      background-image: linear-gradient(-120deg, #00A3FF 0%, #E42DA4 100%);
+      border-radius: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: inset 0 0 0 4px rgba(255,255,255,0.1);
+
+
+      &:hover {
+        box-shadow: inset 0 0 0 4px 10px rgba(255,255,255,0.2);
+      }
+
+      span {
+        margin-left: 10px;
+        position: relative;
+        top: -1px;
+      }
+      i {
+        position: relative;
+        left: -5px;
+        top: 1px;
+      }
+    }
+
+    .profile-image {
+      position: relative;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 380px;
+      border-radius: 50%;
+      img {
+        max-width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 20px solid rgba(255,255,255,1);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        border-radius: 50%;
+
+      }
+    }
+
+    .link-list {
+      padding: 20px 0px 10px 14px;
+      > li {
+        a {
+          color: rgba(0,0,0,0.3);
+          &:hover {
+            color: rgba(0,0,0,0.7);
+          }
+        }
+        display: inline-block;
+        padding-right: 10px;
+      }
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .some-shape,
+    .some-other-shape,
+    .yet-some-other-shape {
+      .inner {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .some-shape {
+      position: absolute;
+      right: -600px;
+      top: -500px;
+      background-color: #1778E8;
+
+      background-image: linear-gradient(-120deg, #b8cbb8 0%, #b8cbb8 0%, #0069FF 0%, #00A3FF 40%, #E42DA4 100%);
+
+      border-radius: 120px;
+      width: 800px;
+      height: 1000px;
+      transform: rotate(-45deg);
+      box-shadow: inset 0 0 0 20px rgba(255,255,255,0.1);
+    }
+    .some-other-shape {
+      position: absolute;
+      left: -550px;
+      top: -670px;
+      background-color: #1778E8;
+
+      background-image: linear-gradient(-120deg, #b8cbb8 0%, #b8cbb8 0%, #0069FF 0%, #00A3FF 40%, #E42DA4 100%);
+
+      border-radius: 120px;
+      width: 400px;
+      height: 600px;
+      transform: rotate(-65deg);
+      box-shadow: inset 0 0 0 20px rgba(255,255,255,0.1);
+    }
+    .yet-some-other-shape {
+      position: absolute;
+      left: -200px;
+      bottom: -400px;
+      background-color: #1778E8;
+
+      background-image: linear-gradient(-120deg, #b8cbb8 0%, #b8cbb8 0%, #0069FF 0%, #00A3FF 40%, #E42DA4 100%);
+
+      border-radius: 120px;
+      width: 400px;
+      height: 600px;
+      transform: rotate(-50deg);
+      box-shadow: inset 0 0 0 20px rgba(255,255,255,0.1);
+    }
+}
+
+.modal .preloader-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+footer {
+  width: 100%;
+  z-index: 4;
+  position: fixed;
+  bottom: 0px;
+  .link-list {
+    > li {
+      a {
+        font-weight: 500;
+        color: rgba(0,0,0,0.3);
+        &:hover {
+          color: rgba(0,0,0,0.7);
+        }
+      }
+      display: inline-block;
+      padding-right: 10px;
+    }
+  }
+
+}
