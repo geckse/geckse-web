@@ -3,8 +3,31 @@
 /*
   header
 */
+$black: #070908;
+body {
+  background-color: $black;
+  color: #FFFFFD;
+}
 
 header {
+  min-height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+canvas {
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
@@ -29,7 +52,7 @@ header {
       font-weight: 500;
       font-size: 1.2rem;
       padding: 0.4rem 0;
-      background-image: linear-gradient(-120deg, #00A3FF 0%, #E42DA4 100%);
+      background-image: linear-gradient(-140deg, #FFB600 0%, #FF3F00 70%, #E42DA4 92%, #00CBFF 100%);
       border-radius: 3rem;
       display: flex;
       align-items: center;
@@ -53,29 +76,51 @@ header {
         top: 1px;
       }
     }
-
+    .force-full-height {
+      height: 100vh;
+    }
     .profile-image {
-      position: relative;
+      position: absolute;
       display: block;
       margin-left: auto;
       margin-right: auto;
-      max-width: 380px;
-      border-radius: 50%;
+      height: 100vh;
+      right: 0px;
+      top: 0px;
+      @media screen and (max-width: 840px){
+        right: -10%;
+      }
+      @media screen and (max-width: 700px){
+        right: -30%;
+      }
+      @media screen and (max-width: 540px){
+        right: -45vw;
+      }
       img {
-        max-width: 100%;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 20px solid rgba(255,255,255,1);
+        max-height: 100%;
       }
       &:after {
         content: "";
+        background: linear-gradient(90deg,
+          hsl(150, 22%, 3%) 0%,
+          hsla(150, 22%, 3%, 0.738) 19%,
+          hsla(150, 22%, 3%, 0.541) 34%,
+          hsla(150, 22%, 3%, 0.382) 47%,
+          hsla(150, 22%, 3%, 0.278) 56.5%,
+          hsla(150, 22%, 3%, 0.194) 65%,
+          hsla(150, 22%, 3%, 0.126) 73%,
+          hsla(150, 22%, 3%, 0.075) 80.2%,
+          hsla(150, 22%, 3%, 0.042) 86.1%,
+          hsla(150, 22%, 3%, 0.021) 91%,
+          hsla(150, 22%, 3%, 0.008) 95.2%,
+          hsla(150, 22%, 3%, 0.002) 98.2%,
+          hsla(150, 22%, 3%, 0) 100%
+        );
         position: absolute;
         top: 0px;
         bottom: 0px;
         left: 0px;
-        right: 0px;
-        border-radius: 50%;
-
+        width: 40%;
       }
     }
 
@@ -83,9 +128,10 @@ header {
       padding: 20px 0px 10px 14px;
       > li {
         a {
-          color: rgba(0,0,0,0.3);
+          font-weight: 500;
+          color: rgba(255,255,255,0.7);
           &:hover {
-            color: rgba(0,0,0,0.7);
+            color: rgba(255,255,255,0.9);
           }
         }
         display: inline-block;
@@ -97,57 +143,6 @@ header {
       position: relative;
     }
 
-    .some-shape,
-    .some-other-shape,
-    .yet-some-other-shape {
-      .inner {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .some-shape {
-      position: absolute;
-      right: -600px;
-      top: -500px;
-      background-color: #1778E8;
-
-      background-image: linear-gradient(-120deg, #b8cbb8 0%, #b8cbb8 0%, #0069FF 0%, #00A3FF 40%, #E42DA4 100%);
-
-      border-radius: 120px;
-      width: 800px;
-      height: 1000px;
-      transform: rotate(-45deg);
-      box-shadow: inset 0 0 0 20px rgba(255,255,255,0.1);
-    }
-    .some-other-shape {
-      position: absolute;
-      left: -550px;
-      top: -670px;
-      background-color: #1778E8;
-
-      background-image: linear-gradient(-120deg, #b8cbb8 0%, #b8cbb8 0%, #0069FF 0%, #00A3FF 40%, #E42DA4 100%);
-
-      border-radius: 120px;
-      width: 400px;
-      height: 600px;
-      transform: rotate(-65deg);
-      box-shadow: inset 0 0 0 20px rgba(255,255,255,0.1);
-    }
-    .yet-some-other-shape {
-      position: absolute;
-      left: -200px;
-      bottom: -400px;
-      background-color: #1778E8;
-
-      background-image: linear-gradient(-120deg, #b8cbb8 0%, #b8cbb8 0%, #0069FF 0%, #00A3FF 40%, #E42DA4 100%);
-
-      border-radius: 120px;
-      width: 400px;
-      height: 600px;
-      transform: rotate(-50deg);
-      box-shadow: inset 0 0 0 20px rgba(255,255,255,0.1);
-    }
 }
 
 .modal .preloader-wrapper {
@@ -157,19 +152,29 @@ header {
     margin-right: auto;
     display: block;
 }
+.modal {
+  color: #303030;
+}
 
 footer {
   width: 100%;
   z-index: 4;
   position: fixed;
   bottom: 0px;
+
+  .container {
+    position: relative;
+    width: 90%;
+    max-width: 90%;
+  }
+
   .link-list {
     > li {
       a {
         font-weight: 500;
-        color: rgba(0,0,0,0.3);
+        color: rgba(255,255,255,0.7);
         &:hover {
-          color: rgba(0,0,0,0.7);
+          color: rgba(255,255,255,0.9);
         }
       }
       display: inline-block;

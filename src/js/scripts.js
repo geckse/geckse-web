@@ -2,7 +2,8 @@
 import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
-import M from 'materialize-css'
+import M from 'materialize-css';
+import * as THREE from 'three';
 //import Materialmodal from './custom-material-box'
 
 /*
@@ -46,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
+    init();
+
 });
 
 
@@ -53,4 +56,91 @@ function str_rot13(str){
     return (str+'').replace(/[a-zA-Z]/gi,function(s){
         return String.fromCharCode(s.charCodeAt(0)+(s.toLowerCase()<'n'?13:-13))
     })
+}
+
+var renderer, scene, camera, composer, ball1, ball2, ball3;
+
+function init() {
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio((window.devicePixelRatio) ? window.devicePixelRatio : 1);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.autoClear = false;
+  renderer.setClearColor(0x000000, 0.0);
+  renderer.setAnimationLoop( animate );
+	document.body.appendChild( renderer.domElement );
+
+  scene = new THREE.Scene();
+
+  camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 1000);
+  camera.position.z = 400;
+  scene.add(camera);
+
+  var geom = new THREE.IcosahedronGeometry(340, 1);
+  var matGrid = new THREE.MeshPhongMaterial({
+    color: 0xffffff,
+    wireframe: true,
+    side: THREE.DoubleSide
+  });
+
+  ball1 = new THREE.Object3D();
+  ball1 = new THREE.Mesh(geom, matGrid);
+  scene.add(ball1);
+
+
+  objectPositionUpdate();
+
+  //var ambientLight = new THREE.AmbientLight(0x999999 );
+  //scene.add(ambientLight);
+
+  var lights = [];
+  lights[0] = new THREE.DirectionalLight( 0xFFC938, 1 );
+  lights[0].position.set( 1.5, 0, 1 );
+  lights[1] = new THREE.DirectionalLight( 0x00D8FF, 1 );
+  lights[1].position.set( -2, 5, 0.5 );
+  lights[2] = new THREE.DirectionalLight( 0xFF4255, 1 );
+  lights[2].position.set( -8, -4, 5.5 );
+  scene.add( lights[0] );
+  scene.add( lights[1] );
+  scene.add( lights[2] );
+
+
+  window.addEventListener('resize', onWindowResize, false);
+
+};
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  objectPositionUpdate();
+
+}
+
+function animate() {
+
+  ball1.rotation.x += 0.0005;
+  ball1.rotation.y -= 0.0040;
+  ball1.rotation.z += 0.0010;
+
+  renderer.clear();
+
+  renderer.render( scene, camera )
+};
+
+function objectPositionUpdate(){
+
+  var scaleFactor = (window.innerWidth/1280);
+  if(scaleFactor > 1.3) scaleFactor = 1.3;
+  if(scaleFactor < 0.3) scaleFactor = 0.3;
+
+  var tempScale = scaleFactor;
+
+  tempScale = 0.5*scaleFactor;
+  ball1.scale.x = tempScale;
+  ball1.scale.y = tempScale;
+  ball1.scale.z = tempScale;
+  ball1.position.x = (window.innerWidth/14)+(-45)+(-(window.innerWidth)/8)*1.2;
+  ball1.position.y = ((window.innerHeight)/12)*1.3;
+
 }
