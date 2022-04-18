@@ -2,72 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>geckse - Web-Developer & App-Developer</title>
-    <meta name="description" content="I code and design digital products. Berlin based Web-Developer & App-Developer." />
+    <title>internetofshit – Maker Hub of geckse</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
-<body>
+<body class="link-tree">
 
+  <header class="container-fluid center">
 
-  <main>
-    <header class="valign-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="pull-front col s12 m10">
-          <h1>Hi! I'm geckse</h1>
-          <p>Let's do something with The Internet!</p>
-
-          <a href="#turnthistomail" class="button waves-effect waves-light"><i data-feather="send"></i> <span>get in touch</span></a>
-
-          <ul class="link-list">
-            <li><a href="https://instagram.com/geck.se" target="_blank"><i data-feather="instagram"></i></a></li>
-            <li><a href="https://twitter.com/geckse" target="_blank"><i data-feather="twitter"></i></a></li>
-            <li><a href="https://twitch.tv/geckse" target="_blank"><i data-feather="twitch"></i></a></li>
-            <li><a href="https://github.com/geckse" target="_blank"><i data-feather="github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/geckse/" target="_blank"><i data-feather="linkedin"></i></a></li>
-            <li><a href="#turnthistomail"><i data-feather="mail"></i></a>
-            </ul>
-
+        <div class="profile-image">
+          <div class="waves-effect waves-light">
+            <img src="/images/geckse.jpg">
           </div>
-          <div class="col s12 m2">
+        </div>
 
-          </div>
+        <h1>I make things.💩</h1>
+        <h2>@internetofshit</h2>
 
-       </div>
+        <a href="https://www.youtube.com/channel/UCHgd_X2nm507Y8KNB6mvGdw?sub_confirmation=1" target="_blank" class="waves-effect waves-light btn sub-button feather-button">
+          <i data-feather="play"></i> <span>Subscribe</span>
+        </a>
+        <ul class="icon-link-list">
+          <li><a href="https://www.youtube.com/channel/UCHgd_X2nm507Y8KNB6mvGdw" target="_blank"><i data-feather="youtube"></i></a></li>
+          <li><a href="https://instagram.com/internetofsh.t" target="_blank"><i data-feather="instagram"></i></a></li>
+          <li><a href="https://www.twitch.tv/geckse" target="_blank"><i data-feather="twitch"></i></a></li>
+          <li><a href="https://twitter.com/geckse" target="_blank"><i data-feather="twitter"></i></a></li>
+          <li><a href="https://github.com/internetofshit" target="_blank"><i data-feather="github"></i></a></li>
+          <li><a href="https://www.thingiverse.com/geckse" target="_blank"><i data-feather="box"></i></a></li>
+          <li><a href="#turnthistomail"><i data-feather="mail"></i></a>
+        </ul>
+  </header>
 
+  <main class="container-fluid center-on-middle">
+
+    <h2>Latest Video
+        <a href="https://www.youtube.com/channel/UCHgd_X2nm507Y8KNB6mvGdw" target="_blank" class="right waves-effect waves-light btn clear feather-button">
+          <i data-feather="chevron-right"></i> <span>All Videos</span>
+        </a>
+    </h2>
+
+    <div class="latest-youtube-video">
+      <!-- http://www.youtube.com/embed?listType=user_uploads&list=USERNAME -->
+      <div class="video-info-box">
+
+        <div class="actual-video">
+            <!-- <iframe width="560px" height="315px" src="https://www.youtube.com/embed/aqz-KE-bpKQ?controls=0&origin=http://shit.yt&showinfo=0playsinline=1" frameborder="0" playsinline allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <img src="/images/youtube-placeholder.jpg" alt="episode-description" title="episode-name">
+        </div>
+        <div class="info-box">
+          <h3>Latest Video!</h3>
+          <p>Description</p>
+        </div>
       </div>
-    </header>
-
-    <div class="profile-image waves-effect waves-dark">
-      <img src="/images/geckse_portrait.jpg">
     </div>
 
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <div class="preloader-wrapper active">
-          <div class="spinner-layer spinner-blue">
-            <div class="circle-clipper left">
-              <div class="circle"></div>
-            </div><div class="gap-patch">
-              <div class="circle"></div>
-            </div><div class="circle-clipper right">
-              <div class="circle"></div>
+    <h2>Hydroponic Logs 🌱
+      <a href="https://www.youtube.com/channel/UCHgd_X2nm507Y8KNB6mvGdw" target="_blank" class="right waves-effect waves-light btn clear feather-button">
+        <i data-feather="chevron-right"></i> <span>All Videos</span>
+      </a>
+    </h2>
+    <div class="youtube-video-slide hydroponic">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="actual-video">
+              <img src="/images/youtube-placeholder.jpg" alt="episode-description" title="episode-name">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="actual-video">
+              <img src="/images/youtube-placeholder.jpg" alt="episode-description" title="episode-name">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="actual-video">
+              <img src="/images/youtube-placeholder.jpg" alt="episode-description" title="episode-name">
             </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Schließen</a>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
 
+    <hr>
+
+    <h2>Instagram AR Filters
+      <a href="https://www.facebook.com/sparkarhub/portfolios/fb/internetofsh.t/" target="_blank" class="right waves-effect waves-light btn clear feather-button">
+        <i data-feather="chevron-right"></i> <span>All Filters</span>
+      </a>
+    </h2>
+    <div class="latest-ar-filter">
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="filter">
+              <a class="inner" href="https://instagram.com/a/r/?effect_id=1176326066031858" target="_blank">
+              <img class="thumb" src="/images/filter-ai-detection-thumb.png" alt="AI object recognition detection frame instagram filter" class="img">
+              <h4 class="name">AI Object Detection</h4>
+              <img class="full" src="/images/filter-ai-detection.jpg" alt="AI object recognition detection frame instagram filter" class="img">
+              </a>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="filter">
+              <a  class="inner" href="https://instagram.com/a/r/?effect_id=1176326066031858" target="_blank">
+              <img class="thumb" src="/images/filter-among-us-thumb.png" alt="AI object recognition detection frame instagram filter" class="img">
+              <h4 class="name">Among Us Impostor & Innocent</h4>
+              <img class="full" src="/images/filter-among-us.jpg" alt="AI object recognition detection frame instagram filter" class="img">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+
+                      <div class="filter">
+                        <a  class="inner" href="https://instagram.com/a/r/?effect_id=1176326066031858" target="_blank">
+                        <img class="thumb" src="/images/filter-pixel-eyes-thumb.png" alt="AI object recognition detection icon" class="img">
+                        <h4 class="name">Pixelated Eyes</h4>
+                        <img class="full" src="/images/filter-pixel-eyes.jpg" alt="AI object recognition detection frame instagram filter" class="img">
+                        </a>
+                      </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+
   </main>
 
-
-
   <footer>
-    <div class="container">
-    <ul class="link-list">
-      <li><a href="#imprint" class="modal-trigger" data-target="modal1" target="_blank">Impressum</a></li>
+    <div class="container center">
+
+
+              <ul class="icon-link-list">
+                <li><a href="https://www.youtube.com/channel/UCHgd_X2nm507Y8KNB6mvGdw" target="_blank"><i data-feather="youtube"></i></a></li>
+                <li><a href="https://instagram.com/internetofsh.t" target="_blank"><i data-feather="instagram"></i></a></li>
+                <li><a href="https://www.twitch.tv/geckse" target="_blank"><i data-feather="twitch"></i></a></li>
+                <li><a href="https://twitter.com/geckse" target="_blank"><i data-feather="twitter"></i></a></li>
+                <li><a href="https://github.com/internetofshit" target="_blank"><i data-feather="github"></i></a></li>
+                <li><a href="https://www.thingiverse.com/geckse" target="_blank"><i data-feather="box"></i></a></li>
+                <li><a href="#turnthistomail"><i data-feather="mail"></i></a>
+              </ul>
+
+    <ul class="icon-link-list">
+      <li><a href="/impressum" class="modal-trigger" data-target="modal1" target="_blank">Imprint</a></li>
+      <li><a href="/datenschutz" class="modal-trigger" data-target="modal1" target="_blank">Data Privacy</a></li>
       </ul>
     </div>
   </footer>
@@ -76,30 +163,7 @@
   <script>
     feather.replace()
   </script>
-
-  <script type="application/ld+json">
-  {
-      "@context": "http://schema.org/",
-      "@type": "WebPage",
-      "@id": "",
-      "name": "geckse",
-      "mainEntity": {
-        "@type": "LocalBusiness",
-        "@id": "#org",
-        "name": "geckse",
-      "image": "https://geckse.de/images/geckse.jpg",
-        "founder": {
-          "@type": "Person",
-          "@id": "#me",
-          "name": "Marcel Claus",
-            "image": "https://geckse.de/images/geckse.jpg"
-        }
-
-      },
-      "publisher": {"@id": "#org"},
-      "author": {"@id": "#me"}
-    }
-  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>
